@@ -1,0 +1,35 @@
+/* Variáveis globais */
+:root {
+  --rosa-principal: #ff6b9d;
+  --rosa-claro: #ffc1d9;
+  --texto-principal: #333;
+  --texto-secundario: #555;
+  --branco: #ffffff;
+
+  --shadow-suave: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --shadow-intensa: 0 8px 20px rgba(0, 0, 0, 0.2);
+  --transicao: all 0.3s ease;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Altura total da tela */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Body global */
+body {
+  font-family: "Verdana", Geneva, Tahoma, sans-serif;
+  color: var(--texto-principal);
+  line-height: 1.6;
+  text-align: center;
+}

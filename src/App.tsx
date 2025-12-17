@@ -1,17 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import PedidoScreen from "./screens/PedidoScreen/PedidoScreen";
+import ConteudoScreen from "./screens/ConteudoScreen/ConteudoScreen";
 import "./App.css";
-import Footer from "./components/Footer";
-import { Header } from "./components/header";
-import { Historia } from "./components/Historia";
 
 function App() {
   return (
-    <>
-      <Header/>
-      <Historia/>
-      <Footer/>
-      
-      
-    </>
+    <Routes>
+      <Route path="/" element={<PedidoScreen />} />
+      <Route path="/conteudo" element={<ConteudoScreen />} />
+    </Routes>
   );
 }
 

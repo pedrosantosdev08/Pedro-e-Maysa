@@ -1,29 +1,4 @@
-/* Estilo global */
-:root {
-  --rosa-principal: #ff6b9d;
-  --rosa-claro: #ffc1d9;
-  --texto-principal: #333;
-  --branco: #fff;
-  --shadow-suave: 0 4px 10px rgba(0, 0, 0, 0.1);
-  --shadow-intensa: 0 8px 20px rgba(0, 0, 0, 0.2);
-  --transicao: all 0.3s ease;
-  --texto-secundario: #333;
-}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-
-#root {
-  font-family: "Verdana", Geneva, Tahoma, sans-serif;
-  text-align: center;
-  color: var(--texto-principal);
-  background-color: var(--branco);
-  line-height: 1.6;
-}
 
 /* Header */
 header {
@@ -31,55 +6,24 @@ header {
   color: var(--branco);
   padding: 80px 20px;
   border-bottom: 5px solid var(--rosa-principal);
-  
-  
 }
 
-h1 {
+header h1 {
   font-size: 3.5rem;
-  letter-spacing: 1px;
 }
 
-h2 {
-  font-size: 2.5rem;
+header h2 {
+  font-size: 2.2rem;
   font-weight: 400;
   margin-top: 10px;
-  
-  
 }
 
-/* Seção principal */
+/* Conteúdo */
 main {
+  flex: 1;
   padding: 60px 10%;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-h3 {
-  color: var(--rosa-principal);
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-article {
-  margin-bottom: 50px;
-  padding: 20px;
-  border-radius: 12px;
-  background-color: #fff7fa;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-h4 {
-  color: var(--rosa-principal);
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  color: var(--texto-secundario);
 }
 
 /* Footer */
@@ -87,152 +31,10 @@ footer {
   background-color: var(--rosa-principal);
   color: var(--branco);
   padding: 40px 20px;
-  font-size: 30px;
-  letter-spacing: 1px;
+  font-size: 1.8rem;
   transition: background 0.3s ease;
 }
 
 footer:hover {
   background-color: #ff85b5;
-}
-
-.desde-card {
-  display: inline-block;
-  background-color: var(--branco);
-  color: var(--rosa-principal);
-  font-weight: bold;
-  font-size: 1.3rem;
-  padding: 12px 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  margin-top: 25px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.desde-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
-.p-final{
-  color: var(--rosa-principal);
-  font-size: 2rem;
-}
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.galeria img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.galeria img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ===== Seção Nossos Momentos ===== */
-.momentos {
-  margin-top: 80px;
-}
-
-.momentos h2 {
-  color: var(--rosa-principal);
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-/* Container da galeria */
-.galeria-momentos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-/* Estilo das imagens */
-.galeria-momentos img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-/* Animação ao passar o mouse */
-.galeria-momentos img:hover {
-  transform: scale(1.05) rotateZ(1deg);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-article, .galeria-momentos img {
-  transition: var(--transicao);
-  box-shadow: var(--shadow-suave);
-}
-
-.galeria-momentos img:hover {
-  box-shadow: var(--shadow-intensa);
-}
-
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .galeria-momentos img {
-    width: 90%;
-    height: auto;
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-section, article, .galeria-momentos img {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 60px 15px;
-  }
-
-  main {
-    padding: 40px 8%;
-  }
 }
